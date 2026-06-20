@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-storage
+  name: backend-storage
 spec:
-  clusterIP: <placeholder>
+  clusterIP: None
   selector:
-    app: <placeholder>
+    app: backend-storage
   ports:
     - port: 3000

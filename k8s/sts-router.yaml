@@ -15,17 +15,17 @@ spec:
     spec:
       containers:
         - name: router
-          image: env.IMAGE_NAME_ROUTER
+          image: gcr.io/repaso-examen-500009/router
           ports:
             - containerPort: 3000
           volumeMounts:
-            - name: <placeholder>
+            - name: data
               mountPath: /data
   volumeClaimTemplates:
     - metadata:
-        name: <placeholder>
+        name: data
       spec:
-        accessModes: <placeholder>
+        accessModes: readWriteOnce
         storageClassName: standard
         resources:
           requests:
